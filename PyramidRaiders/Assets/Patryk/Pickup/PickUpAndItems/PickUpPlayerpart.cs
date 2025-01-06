@@ -9,12 +9,7 @@ public class PickUpPlayerpart : MonoBehaviour
     [SerializeField] private Inventory_ItemCounter inventoryCounter;
     [SerializeField] private string pickupKey ="F";
     [SerializeField] private float pickupRange = 5.0f;
-    private void Start()
-    {
-       inventoryCounter  = GetComponent<Inventory_ItemCounter>();
-
-
-    }
+  
     void Update()
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, pickupRange))
@@ -26,7 +21,7 @@ public class PickUpPlayerpart : MonoBehaviour
                 pickupHintUI.SetActive(true);
                 hintText.text = $"Naciœnij {pickupKey}, aby podnieœæ {pickupItem.item.itemName}";
 
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     inventoryCounter.AddItem(pickupItem.item);
                     Destroy(hit.collider.gameObject);
