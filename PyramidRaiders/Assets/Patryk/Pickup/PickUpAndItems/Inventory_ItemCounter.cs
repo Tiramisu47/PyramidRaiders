@@ -6,7 +6,11 @@ public class Inventory_ItemCounter : MonoBehaviour
 {
     [SerializeField] private List<ItemsSO> items = new(); // Lista przedmiotów
     [SerializeField] private TextMeshProUGUI valueText; // Tekst w UI
-    // Dodaj przedmiot do listy
+                                                        // Dodaj przedmiot do listy
+
+    int x = 0;
+    int y = 0;
+
     public void AddItem(ItemsSO item)
     {
         
@@ -32,12 +36,12 @@ public class Inventory_ItemCounter : MonoBehaviour
     }
     private void UpdateValueUI()
     {
-        int x = 0;
         foreach (var item in items)
         {
             x += item.value;
         }
         valueText.text = x.ToString() + "$";
+        y = items.Count;
     }
     // Wyœwietl wszystkie przedmioty
     public void DisplayItems()
@@ -47,5 +51,11 @@ public class Inventory_ItemCounter : MonoBehaviour
         {
             Debug.Log($"- {item.itemName}: {item.description}");
         }
+    }
+
+    public void SaveInventoryData()
+    {
+        EndSceneManager.TotalValue = x; // Przypisanie ca³kowitej wartoœci
+        EndSceneManager.TotalCount = y; // Przypisanie liczby przedmiotów
     }
 }

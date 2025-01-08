@@ -5143,6 +5143,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6313761252699860087, guid: 08fc93b0069c3d5468cc1203d9eef2af,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2061905781}
     - target: {fileID: 8847983125044346674, guid: 08fc93b0069c3d5468cc1203d9eef2af,
         type: 3}
       propertyPath: m_fontSize
@@ -5153,6 +5158,11 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8971775927632537428, guid: 08fc93b0069c3d5468cc1203d9eef2af,
+        type: 3}
+      propertyPath: inventoryCounter
+      value: 
+      objectReference: {fileID: 1091710540}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12884,6 +12894,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2006022063}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!136 &2061905781 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 3956071508686956943, guid: 80b08fe0edeba264b8877c0a6f645ede,
+    type: 3}
+  m_PrefabInstance: {fileID: 17526932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2069102000
 Mesh:
   m_ObjectHideFlags: 0
