@@ -39,31 +39,56 @@ public class RoomManager : MonoBehaviour
 
     private void GenerateRoomAtExit(Transform exit)
     {
+        // Losowy typ pokoju
         RoomType randomRoom = roomTypes[Random.Range(0, roomTypes.Count)];
+        Debug.Log($"Generowanie pokoju typu: {randomRoom.typeName}");
+
+        // Tworzenie pokoju
         GameObject room = Instantiate(randomRoom.prefab, exit.position, exit.rotation);
 
         // Detekcja kolizji
         if (IsRoomColliding(room))
         {
+            Debug.Log($"Kolizja wykryta dla pokoju: {randomRoom.typeName}. Niszczenie pokoju.");
             Destroy(room);
             return;
         }
 
+        // Dodanie wyjœæ nowego pokoju
         RegisterRoomExits(room);
         spawnedRooms.Add(room);
+        Debug.Log($"Pokój {randomRoom.typeName} wygenerowany poprawnie.");
     }
-
     private bool IsRoomColliding(GameObject room)
     {
-        Collider[] colliders = Physics.OverlapBox(room.transform.position, room.transform.localScale / 2, room.transform.rotation);
-        foreach (var collider in colliders)
+        BoxCollider roomCollider = room.GetComponent<BoxCollider>();
+
+        if (roomCollider == null)
         {
-            if (!spawnedRooms.Contains(collider.gameObject))
+            Debug.LogError($"Room {room.name} nie posiada BoxCollidera! SprawdŸ prefab.");
+            return true; // Jeœli brak BoxCollidera, traktujemy to jako kolizjê
+        }
+
+        Collider[] overlappingColliders = Physics.OverlapBox(
+            roomCollider.bounds.center,
+            roomCollider.bounds.extents,
+            room.transform.rotation
+        );
+
+        foreach (var collider in overlappingColliders)
+        {
+            if (collider.gameObject == room)
+                continue; // Ignoruj obecny pokój
+
+            // Sprawdzaj tylko obiekty z tagiem "Room"
+            if (collider.CompareTag("Room"))
             {
-                return true;
+                Debug.Log($"Kolizja wykryta: {room.name} z {collider.gameObject.name}");
+                return true; // Wykryto kolizjê z innym pokojem
             }
         }
-        return false;
+
+        return false; // Brak kolizji z obiektami oznaczonymi tagiem "Room"
     }
 
     private void RegisterRoomExits(GameObject room)
@@ -72,12 +97,12 @@ public class RoomManager : MonoBehaviour
         {
             if (child.CompareTag("Exit"))
             {
+                Debug.Log($"Wyjœcie dodane do kolejki: {child.name}");
                 exitsQueue.Enqueue(child);
             }
         }
         spawnedRooms.Add(room);
     }
-
     private void EnsureMinimumRooms()
     {
         foreach (var roomType in roomTypes)
