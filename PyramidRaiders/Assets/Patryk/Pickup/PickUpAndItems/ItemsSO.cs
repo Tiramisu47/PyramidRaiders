@@ -7,4 +7,5 @@ public class ItemsSO : ScriptableObject
     public Sprite itemIcon;       // Ikona przedmiotu
     public string description;    // Opis przedmiotu
     public int value;             // Wartoœæ przedmiotu
+    public GameObject prefab;     // prefab Objektu
 }
