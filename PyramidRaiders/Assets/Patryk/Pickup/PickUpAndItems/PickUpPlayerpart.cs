@@ -21,7 +21,7 @@ public class PickUpPlayerpart : MonoBehaviour
                 pickupHintUI.SetActive(true);
                 hintText.text = $"Naciœnij {pickupKey}, aby podnieœæ {pickupItem.item.itemName}";
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     inventoryCounter.AddItem(pickupItem.item);
                     Destroy(hit.collider.gameObject);

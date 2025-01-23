@@ -44,14 +44,7 @@ public class Inventory_ItemCounter : MonoBehaviour
         y = items.Count;
     }
     // Wyœwietl wszystkie przedmioty
-    public void DisplayItems()
-    {
-        Debug.Log("Lista przedmiotów w ekwipunku:");
-        foreach (var item in items)
-        {
-            Debug.Log($"- {item.itemName}: {item.description}");
-        }
-    }
+
 
     public void SaveInventoryData()
     {
