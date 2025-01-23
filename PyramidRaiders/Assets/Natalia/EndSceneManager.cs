@@ -21,13 +21,12 @@ public class EndSceneManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene("DEMO");
+        SceneManager.LoadScene("LevelGenerator");
     }
 
     public void MainMenu()
     {
-        Debug.Log("brak dostêpu");
-        //SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {
