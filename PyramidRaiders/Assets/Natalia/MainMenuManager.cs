@@ -5,7 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene("LevelGenerator");
+        SceneManager.LoadScene(1);
     }
 
     public void Continue()

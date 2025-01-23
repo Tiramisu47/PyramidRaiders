@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Kacper/DEMO.unity
     guid: 24095f91e22b33e46a085cfaaeec8225
   - enabled: 1
+    path: Assets/Natalia/MainMenu.unity
+    guid: 2c928ce08ee305547be6b6db511663e5
+  - enabled: 1
     path: Assets/Patryk/GenerateLevel/LevelGenerator.unity
     guid: 307b62366364f274eaa2404e114b98c3
   - enabled: 1
