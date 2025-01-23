@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c829244d090574d8e8add704592d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flameThrower: {fileID: 7276396137011032936, guid: f5f6188db4d35964186b3c9e67b3222a,
+  flameThrower: {fileID: 6767874896435392257, guid: f5f6188db4d35964186b3c9e67b3222a,
     type: 3}
 --- !u!65 &6969932164733639692
 BoxCollider:

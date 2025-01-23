@@ -4,7 +4,7 @@ public class RopeTrigger : MonoBehaviour
 {
     // Referencja do miotacza ognia
     [SerializeField]
-    private FlameThrower flameThrower;
+    private FlameTrap flameThrower;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,7 +16,7 @@ public class RopeTrigger : MonoBehaviour
             // Wywo³anie akcji miotacza ognia
             if (flameThrower != null)
             {
-                flameThrower.ActivateFlame();
+                flameThrower.ActivateFlame(); // Wywo³anie metody z FlameTrap
             }
             else
             {
