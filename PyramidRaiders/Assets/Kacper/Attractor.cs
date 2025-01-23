@@ -3,9 +3,9 @@ using UnityEngine;
 public class Attractor : MonoBehaviour
 {
     public float attractionRange = 10f;    // Zasięg przyciągania
-    public float attractionForce = 5f;     // Siła przyciągania
+    public float attractionSpeed = 5f;     // Prędkość przyciągania
 
-    private void FixedUpdate()
+    private void Update()
     {
         // Znajdź obiekt gracza po tagu "Player"
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -18,16 +18,11 @@ public class Attractor : MonoBehaviour
             // Sprawdź, czy gracz znajduje się w zasięgu przyciągania
             if (distance <= attractionRange)
             {
-                // Oblicz kierunek przyciągania w stronę obiektu
-                Vector3 direction = (player.transform.position - transform.position).normalized;
+                // Oblicz kierunek przyciągania
+                Vector3 direction = (transform.position - player.transform.position).normalized;
 
-                // Dodaj siłę przyciągania do gracza
-                Rigidbody playerRb = player.GetComponent<Rigidbody>();
-                if (playerRb != null)
-                {
-                    // Dodaj siłę w kierunku gracza
-                    playerRb.AddForce(direction * attractionForce, ForceMode.Force);
-                }
+                // Przemieść gracza w kierunku przyciągającego obiektu
+                player.transform.position = Vector3.MoveTowards(player.transform.position, transform.position, attractionSpeed * Time.deltaTime);
             }
         }
     }
