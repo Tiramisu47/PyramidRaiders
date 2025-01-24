@@ -1,22 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ResetPlane : MonoBehaviour
 {
-    public Transform resetPoint; // gdzie bedzie spawnowal sie gracz
+    public Transform resetPoint;
 
-    public void OnTriggerEnter(Collider player)
+    private void OnTriggerEnter(Collider other)
     {
-        if (player.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            player.transform.position = resetPoint.position;
-            Rigidbody rb = player.GetComponent<Rigidbody>();
+            Debug.Log("Gracz dotkn¹³ obszaru resetu.");
+            Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
+
+            other.transform.position = resetPoint.position;
         }
     }
 }
