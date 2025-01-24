@@ -8,7 +8,9 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private List<RoomType> roomTypes; // Lista typów pomieszczeñ
     [SerializeField] private int totalRooms = 10; // Ca³kowita liczba pomieszczeñ do wygenerowania
     [SerializeField] private GameObject startRoomPrefab; // Prefab startowego pomieszczenia
-
+    [SerializeField] private GameObject endRoomPrefab; // Prefab koncowego pomieszczenia
+    [SerializeField] private GameObject deadendRoomPrefab; // Prefab koncowegokorytazakolizji
+                                                           // pomieszczenia
     private List<GameObject> spawnedRooms = new List<GameObject>(); // Lista wygenerowanych pomieszczeñ
     private Queue<Transform> exitsQueue = new Queue<Transform>(); // Kolejka wyjœæ do obs³u¿enia
 
@@ -32,7 +34,7 @@ public class RoomManager : MonoBehaviour
             Transform exit = exitsQueue.Dequeue();
             GenerateRoomAtExit(exit);
         }
-
+        PlaceEndRoom();
         // Sprawdzenie minimalnych wymagañ
         EnsureMinimumRooms();
     }
@@ -51,6 +53,7 @@ public class RoomManager : MonoBehaviour
         {
             Debug.Log($"Kolizja wykryta dla pokoju: {randomRoom.typeName}. Niszczenie pokoju.");
             Destroy(room);
+            Instantiate(deadendRoomPrefab, exit.position, exit.rotation);
             return;
         }
 
@@ -127,7 +130,32 @@ public class RoomManager : MonoBehaviour
             }
         }
     }
+    private void PlaceEndRoom()
+    {
+        if (exitsQueue.Count == 0)
+        {
+            Debug.LogWarning("Brak dostêpnych wyjœæ do umieszczenia pokoju koñcowego.");
+            return;
+        }
 
+        Transform exit = exitsQueue.Dequeue();
+
+        // Tworzenie pokoju koñcowego
+        GameObject endRoom = Instantiate(endRoomPrefab, exit.position, exit.rotation);
+
+        // Sprawdzenie kolizji
+        if (IsRoomColliding(endRoom))
+        {
+            Debug.Log($"Kolizja wykryta dla pokoju koñcowego. Niszczenie pokoju.");
+            Destroy(endRoom);
+            Instantiate(deadendRoomPrefab, exit.position, exit.rotation);
+        }
+        else
+        {
+            Debug.Log("Pokój koñcowy wygenerowany poprawnie.");
+            spawnedRooms.Add(endRoom);
+        }
+    }
     private void ClearLevel()
     {
         foreach (var room in spawnedRooms)

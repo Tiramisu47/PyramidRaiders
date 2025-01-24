@@ -303,11 +303,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f66c057227f996943a0a9d60c956a571, type: 2}
   - {fileID: 11400000, guid: 04c5d3f41669025489c15d43e57d1582, type: 2}
   - {fileID: 11400000, guid: 383c2e11e835d014abace6616dce6e9f, type: 2}
-  - {fileID: 11400000, guid: 32f5c78e444ce5a44b87d9c0b691ff5e, type: 2}
   - {fileID: 11400000, guid: 149b473846e3c9c4b9191f6bb05c23ac, type: 2}
-  - {fileID: 11400000, guid: 3723cc2cdff0beb4b9d7699509502081, type: 2}
+  - {fileID: 11400000, guid: 32f5c78e444ce5a44b87d9c0b691ff5e, type: 2}
   totalRooms: 15
   startRoomPrefab: {fileID: 1471418630688041637, guid: 00f3092995b2ecb4d857080d2faf4d94,
+    type: 3}
+  endRoomPrefab: {fileID: 1471418630688041637, guid: fe8cc186994d7cc4a9e31681d8bfbdd5,
+    type: 3}
+  deadendRoomPrefab: {fileID: 3423114543354973535, guid: da4d9310eebc1474da26df0927adbfe5,
     type: 3}
 --- !u!4 &654985359
 Transform:
