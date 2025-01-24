@@ -144,6 +144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1383213476891056852, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383213476891056852, guid: 80b08fe0edeba264b8877c0a6f645ede,
+        type: 3}
       propertyPath: m_AllowDynamicResolution
       value: 1
       objectReference: {fileID: 0}
@@ -212,6 +217,11 @@ PrefabInstance:
       propertyPath: hintText
       value: 
       objectReference: {fileID: 1633421884}
+    - target: {fileID: 6274407834822516734, guid: 80b08fe0edeba264b8877c0a6f645ede,
+        type: 3}
+      propertyPath: pickupKey
+      value: F
+      objectReference: {fileID: 0}
     - target: {fileID: 6274407834822516734, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: pickupHintUI
