@@ -212,6 +212,11 @@ PrefabInstance:
       propertyPath: m_Height
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4915271547419033134, guid: 80b08fe0edeba264b8877c0a6f645ede,
+        type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6274407834822516734, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: hintText
