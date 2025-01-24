@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ae35e1ab0ba49449dfb58b7dcbc7e8, type: 3}
+  m_Name: StartRoom 1
+  m_EditorClassIdentifier: 
+  typeName: EndRoom
+  prefab: {fileID: 1471418630688041637, guid: fe8cc186994d7cc4a9e31681d8bfbdd5, type: 3}
+  minCount: 1

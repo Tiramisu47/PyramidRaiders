@@ -180,17 +180,17 @@ PrefabInstance:
     - target: {fileID: 3012594732819791288, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3012594732819791288, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3012594732819791288, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3012594732819791288, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
@@ -245,8 +245,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4529109409426382359, guid: 80b08fe0edeba264b8877c0a6f645ede,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28761649}
   m_SourcePrefab: {fileID: 100100000, guid: 80b08fe0edeba264b8877c0a6f645ede, type: 3}
+--- !u!1 &28761648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529109409426382359, guid: 80b08fe0edeba264b8877c0a6f645ede,
+    type: 3}
+  m_PrefabInstance: {fileID: 28761647}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &28761649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28761648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119c1da200d3121438812aca352ca04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemConunter: {fileID: 1633421883}
 --- !u!1 &654985357
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,8 +305,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 383c2e11e835d014abace6616dce6e9f, type: 2}
   - {fileID: 11400000, guid: 32f5c78e444ce5a44b87d9c0b691ff5e, type: 2}
   - {fileID: 11400000, guid: 149b473846e3c9c4b9191f6bb05c23ac, type: 2}
-  totalRooms: 10
-  startRoomPrefab: {fileID: 3423114543354973535, guid: 190ecb3bfb89b214e93874233ea1fb71,
+  - {fileID: 11400000, guid: 3723cc2cdff0beb4b9d7699509502081, type: 2}
+  totalRooms: 15
+  startRoomPrefab: {fileID: 1471418630688041637, guid: 00f3092995b2ecb4d857080d2faf4d94,
     type: 3}
 --- !u!4 &654985359
 Transform:
@@ -670,6 +694,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1075119716}
   - {fileID: 654985359}
-  - {fileID: 28761647}
   - {fileID: 1633421882}
   - {fileID: 908198839}
+  - {fileID: 28761647}

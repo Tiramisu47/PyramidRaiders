@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 6848714681403967669}
   - component: {fileID: 4755221149234584789}
   - component: {fileID: 7433292128227337278}
+  - component: {fileID: 5737120089281801475}
   m_Layer: 7
   m_Name: prefabroom
   m_TagString: Untagged
@@ -881,13 +882,26 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &5737120089281801475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653903124957322702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84960c342fb6809488169ab77deba222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryCounter: {fileID: 0}
 --- !u!1001 &154713756034393610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -899,6 +913,10 @@ PrefabInstance:
     - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Minetrack_Bridge_Broken_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 424770, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1538,7 +1556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 153826, guid: 8c3c19c34c678744485079676334c608, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 468028, guid: 8c3c19c34c678744485079676334c608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2342,6 +2360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wood_Railing_01
       objectReference: {fileID: 0}
+    - target: {fileID: 144368, guid: 3d9255a806ebe2045b23fb7077837544, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 457012, guid: 3d9255a806ebe2045b23fb7077837544, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.41444
@@ -2562,6 +2584,10 @@ PrefabInstance:
     - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Minetrack_Bridge_Broken_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 424770, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2819,6 +2845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Minetrack_Bridge_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 187580, guid: b0fdd261cab4d884ea4d14190dfc171a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 458488, guid: b0fdd261cab4d884ea4d14190dfc171a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.18263
@@ -2881,6 +2911,10 @@ PrefabInstance:
     - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_Name
       value: SM_Env_Minetrack_Bridge_Broken_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 112134, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 424770, guid: 1e7cc353830e2d6409a9b84abc744fd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3673,6 +3707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wood_Platform_01
       objectReference: {fileID: 0}
+    - target: {fileID: 156114, guid: 480822748dfc6ba478baf6bc23e905e2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 473050, guid: 480822748dfc6ba478baf6bc23e905e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.533112
@@ -3940,6 +3978,10 @@ PrefabInstance:
     - target: {fileID: 156114, guid: 480822748dfc6ba478baf6bc23e905e2, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wood_Platform_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 156114, guid: 480822748dfc6ba478baf6bc23e905e2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 473050, guid: 480822748dfc6ba478baf6bc23e905e2, type: 3}
       propertyPath: m_LocalPosition.x
