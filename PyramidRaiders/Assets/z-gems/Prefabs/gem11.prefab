@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5356357591686478013}
   - component: {fileID: 1831016382934516804}
   - component: {fileID: 8922661826746482154}
-  - component: {fileID: 4772995913510715880}
   - component: {fileID: 8419117557684855924}
+  - component: {fileID: 8237461890989097726}
   m_Layer: 0
   m_Name: gem11
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,22 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: e71c8e0312e5fde4eb12b218a8b513a2, type: 2}
---- !u!114 &4772995913510715880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96200388220924056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f86ef8093a8433a46b9bea19de30f6e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xForce: 0
-  yForce: 0
-  zForce: 0.5
-  speedMultiplier: 1
 --- !u!64 &8419117557684855924
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -137,3 +121,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2449627909857923120, guid: 7ebedb728dfdf5e4e8edaca744a5386a, type: 3}
+--- !u!114 &8237461890989097726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96200388220924056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6b87557d8653843a93f8eee414d886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  rotationAxis: {x: 0, y: 1, z: 0}
