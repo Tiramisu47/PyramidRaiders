@@ -242,7 +242,11 @@ Transform:
   m_GameObject: {fileID: 1920211407255191578}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.823218, z: -0, w: 0.56772536}
+<<<<<<< HEAD
   m_LocalPosition: {x: 6.96, y: 0.392, z: -2.4}
+=======
+  m_LocalPosition: {x: 6.96, y: 0, z: -2.4}
+>>>>>>> parent of 597a2c6 (zmiany w itemach i miejscach an mapie)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -646,7 +650,11 @@ Transform:
   m_GameObject: {fileID: 5740758955768755040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.585, y: 0.35, z: -3.578}
+=======
+  m_LocalPosition: {x: 0.585, y: 0, z: -3.578}
+>>>>>>> parent of 597a2c6 (zmiany w itemach i miejscach an mapie)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -711,7 +719,11 @@ Transform:
   m_GameObject: {fileID: 7350919595221263166}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 1.16, y: 0.48, z: 2.92}
+=======
+  m_LocalPosition: {x: 1.16, y: 0, z: 2.92}
+>>>>>>> parent of 597a2c6 (zmiany w itemach i miejscach an mapie)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
