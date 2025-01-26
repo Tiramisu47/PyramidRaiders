@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 0}
   description: Copper
   value: 25
-  prefab: {fileID: 96200388220924056, guid: 85502625807dd6c4eb67d5991176abae, type: 3}
+  prefab: {fileID: 4870261251428351908, guid: ff62c3378f5903c469e8b4c72316012d, type: 3}

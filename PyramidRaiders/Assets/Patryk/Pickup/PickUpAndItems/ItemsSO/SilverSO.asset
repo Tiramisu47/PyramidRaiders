@@ -16,4 +16,4 @@ MonoBehaviour:
   itemIcon: {fileID: 0}
   description: Silver
   value: 50
-  prefab: {fileID: 96200388220924056, guid: 85502625807dd6c4eb67d5991176abae, type: 3}
+  prefab: {fileID: 1058487672942462456, guid: 2712af19ac8609840b60a8eb533b6e0e, type: 3}
