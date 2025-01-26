@@ -135,12 +135,12 @@ PrefabInstance:
     - target: {fileID: 1084553203476201683, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: sensX
-      value: 550
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 1084553203476201683, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
       propertyPath: sensY
-      value: 550
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 1383213476891056852, guid: 80b08fe0edeba264b8877c0a6f645ede,
         type: 3}
