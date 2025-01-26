@@ -1,18 +1,11 @@
 ﻿using UnityEngine;
 
-public class RotatePrefab : MonoBehaviour
-{
-    // Szybkość obrotu
-    [SerializeField]
-    private float rotationSpeed = 50f;
+public class Rotate : MonoBehaviour {
 
-    // Oś obrotu
-    [SerializeField]
-    private Vector3 rotationAxis = Vector3.up;
+    public float xForce = 0, yForce = 0, zForce = 0, speedMultiplier = 1;
 
-    void Update()
-    {
-        // Obracanie obiektu wokół jego lokalnej osi
-        transform.Rotate(rotationAxis * rotationSpeed * Time.deltaTime);
+    void Update () {
+        this.transform.Rotate (xForce * speedMultiplier, yForce * speedMultiplier, zForce * speedMultiplier);
     }
+
 }
