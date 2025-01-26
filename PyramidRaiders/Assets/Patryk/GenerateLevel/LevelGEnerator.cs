@@ -13,6 +13,7 @@ public class RoomManager : MonoBehaviour
                                                            // pomieszczenia
     private List<GameObject> spawnedRooms = new List<GameObject>(); // Lista wygenerowanych pomieszczeñ
     private Queue<Transform> exitsQueue = new Queue<Transform>(); // Kolejka wyjœæ do obs³u¿enia
+    private List<GameObject> deadendRooms = new List<GameObject>();
 
     private void Start()
     {
@@ -53,9 +54,11 @@ public class RoomManager : MonoBehaviour
         {
             Debug.Log($"Kolizja wykryta dla pokoju: {randomRoom.typeName}. Niszczenie pokoju.");
             Destroy(room);
-            Instantiate(deadendRoomPrefab, exit.position, exit.rotation);
+            GameObject deadend = Instantiate(deadendRoomPrefab, exit.position, exit.rotation);
+            deadendRooms.Add(deadend); // Dodajemy deadend do listy
             return;
         }
+
 
         // Dodanie wyjœæ nowego pokoju
         RegisterRoomExits(room);
@@ -134,7 +137,24 @@ public class RoomManager : MonoBehaviour
     {
         if (exitsQueue.Count == 0)
         {
-            Debug.LogWarning("Brak dostêpnych wyjœæ do umieszczenia pokoju koñcowego.");
+            if (deadendRooms.Count == 0)
+            {
+                Debug.LogWarning("Brak dostêpnych wyjœæ ani deadendów do umieszczenia pokoju koñcowego.");
+                return;
+            }
+
+            // Wybieramy ostatni deadend
+            GameObject lastDeadend = deadendRooms[deadendRooms.Count - 1];
+            Vector3 position = lastDeadend.transform.position;
+            Quaternion rotation = lastDeadend.transform.rotation;
+
+            // Tworzymy œcianê koñcow¹ tu¿ przed deadendem
+            position -= lastDeadend.transform.forward * 2; // Odsuñ collider od deadendu
+            lastDeadend.SetActive(false);
+            GameObject endWall = Instantiate(endRoomPrefab, position, rotation);
+            Debug.Log("Pokój koñcowy umieszczony przed ostatnim deadendem.");
+            spawnedRooms.Add(endWall);
+
             return;
         }
 
@@ -156,6 +176,7 @@ public class RoomManager : MonoBehaviour
             spawnedRooms.Add(endRoom);
         }
     }
+
     private void ClearLevel()
     {
         foreach (var room in spawnedRooms)

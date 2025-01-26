@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typeName: parcour
   prefab: {fileID: 2961441528032008188, guid: f295158c0d7219f409abc4ef0b7827f2, type: 3}
-  minCount: 0
+  minCount: 1

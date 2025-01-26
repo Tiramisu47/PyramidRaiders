@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33ae35e1ab0ba49449dfb58b7dcbc7e8, type: 3}
-  m_Name: corridor2
+  m_Name: corridor1
   m_EditorClassIdentifier: 
-  typeName: corridor2
-  prefab: {fileID: 3423114543354973535, guid: d807b0abb6f462b49a6782ec3587eb53, type: 3}
-  minCount: 0
+  typeName: corridor1
+  prefab: {fileID: 3423114543354973535, guid: 745fe5040adb963468147f07c07adc15, type: 3}
+  minCount: 1
