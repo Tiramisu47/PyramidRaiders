@@ -586,6 +586,12 @@ MonoBehaviour:
     spawnChance: 20
     itemsForLocation:
     - {fileID: 11400000, guid: e71c8e0312e5fde4eb12b218a8b513a2, type: 2}
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream:PyramidRaiders/Assets/A pokoje/room 5.prefab
+>>>>>>> Stashed changes:PyramidRaiders/Assets/Patryk/GenerateLevel/room 5.prefab
+=======
+>>>>>>> parent of 842f36a (idk)
 >>>>>>> Stashed changes:PyramidRaiders/Assets/Patryk/GenerateLevel/room 5.prefab
 --- !u!1 &5226714915602550247
 GameObject:
