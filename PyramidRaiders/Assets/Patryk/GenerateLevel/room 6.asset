@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62eaf579517f5774d818e190f0646551, type: 3}
-  m_Name: CopperSO
+  m_Script: {fileID: 11500000, guid: 33ae35e1ab0ba49449dfb58b7dcbc7e8, type: 3}
+  m_Name: room 6
   m_EditorClassIdentifier: 
-  itemName: Copper
-  itemIcon: {fileID: 0}
-  description: Copper
-  value: 25
-  prefab: {fileID: 96200388220924056, guid: 85502625807dd6c4eb67d5991176abae, type: 3}
+  typeName: room 6
+  prefab: {fileID: 1170469683485511705, guid: 75b2f6903cb532d4091dbc57010358db, type: 3}
+  minCount: 1

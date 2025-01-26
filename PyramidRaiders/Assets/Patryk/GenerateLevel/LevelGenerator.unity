@@ -305,7 +305,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 383c2e11e835d014abace6616dce6e9f, type: 2}
   - {fileID: 11400000, guid: 149b473846e3c9c4b9191f6bb05c23ac, type: 2}
   - {fileID: 11400000, guid: 32f5c78e444ce5a44b87d9c0b691ff5e, type: 2}
-  totalRooms: 15
+  totalRooms: 50
   startRoomPrefab: {fileID: 1471418630688041637, guid: 00f3092995b2ecb4d857080d2faf4d94,
     type: 3}
   endRoomPrefab: {fileID: 1471418630688041637, guid: fe8cc186994d7cc4a9e31681d8bfbdd5,
