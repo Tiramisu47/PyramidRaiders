@@ -326,11 +326,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.823218, z: -0, w: 0.56772536}
 <<<<<<< Updated upstream:PyramidRaiders/Assets/A pokoje/korytarz x2.prefab
-<<<<<<< Updated upstream:PyramidRaiders/Assets/A pokoje/korytarz x2.prefab
   m_LocalPosition: {x: 6, y: 0.5, z: -1.5}
-=======
-  m_LocalPosition: {x: 6, y: 0.7, z: -1.5}
->>>>>>> Stashed changes:PyramidRaiders/Assets/Patryk/GenerateLevel/korytarz x2.prefab
 =======
   m_LocalPosition: {x: 6, y: 0.7, z: -1.5}
 >>>>>>> Stashed changes:PyramidRaiders/Assets/Patryk/GenerateLevel/korytarz x2.prefab
